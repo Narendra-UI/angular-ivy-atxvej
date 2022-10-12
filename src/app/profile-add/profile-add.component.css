@@ -1,0 +1,14 @@
+.b-10 {
+  margin-left: 350px;
+  display: flex;
+}
+
+.head {
+  text-align: center;
+  background-color: rgb(248, 183, 183);
+  top: 0;
+}
+.f-data {
+  margin-left: 250px;
+  margin-top: 70px;
+}

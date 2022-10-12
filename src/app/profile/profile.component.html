@@ -1,0 +1,28 @@
+<h4 class="head">Profile</h4>
+<div>
+  <div class="b-1">
+    <button type="button" class="btn btn-warning">
+      <a [routerLink]="'/profile/add'">ADD+</a>
+    </button>
+  </div>
+  <div class="row" style="margin-top:100px;margin-left:50px;">
+    <table class="col-md-12">
+      <tr>
+        <th>S. No</th>
+        <th>Name</th>
+        <th>Contact</th>
+        <th>Adhar NO</th>
+        <th>E-Mail</th>
+        <th>Actions</th>
+      </tr>
+      <tr *ngFor="let obj of data">
+        <td>1</td>
+        <td>{{ obj.name }}</td>
+        <td>{{ obj.contact }}</td>
+        <td>{{ obj.aadhaar }}</td>
+        <td>{{ obj.email }}</td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+</div>
