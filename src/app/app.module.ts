@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component';
 import { MainComponent } from './main/main.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SettingsComponent } from './settings/settings.component';
@@ -26,7 +25,6 @@ import { SaleemService } from './saleem.service';
     HomeComponent,
     ProfileComponent,
     AboutComponent,
-    ContactComponent,
     SettingsComponent,
     ProfileAddComponent,
   ],
