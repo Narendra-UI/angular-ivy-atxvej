@@ -8,11 +8,13 @@
   </tr>
   <tr *ngFor="let Emp of employs">
     <td [ngStyle]="{ color: 'blue' }">{{ Emp.name }}</td>
-    <td [ngStyle]="{ color: 'blue' }">{{ Emp.email }}</td>
+    <td [ngStyle]="{ color: 'blue' }">
+      <div *ngIf="Emp.email == ''; else email">
+        <p>No email.</p>
+      </div>
+      <ng-template #email></ng-template>
+      {{ Emp.email }}
+    </td>
     <td>{{ Emp.no }}</td>
   </tr>
 </table>
-
-<div *ngIf="employs.length == 0">
-  <p>No email.</p>
-</div>
