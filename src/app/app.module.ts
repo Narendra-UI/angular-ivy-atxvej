@@ -3,6 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import {
+  FontAwesomeModule,
+  FaIconLibrary,
+} from '@fortawesome/angular-fontawesome';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
@@ -16,7 +20,14 @@ import { AppRoutingModule } from './app-routing-module/routing.module';
 import { SaleemService } from './saleem.service';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, AppRoutingModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FontAwesomeModule,
+    FaIconLibrary,
+  ],
 
   declarations: [
     AppComponent,
