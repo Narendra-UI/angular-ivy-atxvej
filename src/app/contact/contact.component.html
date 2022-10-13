@@ -1,22 +1,14 @@
 <h4 class="head">Contact</h4>
 
 <table class="table table-striped">
-  <th>
-    <tr>
-      <th scope="col">name</th>
-      <th scope="col">email</th>
-      <th scope="col">no</th>
-    </tr>
-  </th>
+  <tr>
+    <th scope="col">name</th>
+    <th scope="col">email</th>
+    <th scope="col">no</th>
+  </tr>
   <tr *ngFor="let Emp of employs">
-    <td>Name {{}}</td>
-    <td>email {{}}</td>
-    <td>no{{}}</td>
+    <td>{{ Emp.name }}</td>
+    <td>{{ Emp.email }}</td>
+    <td>{{ Emp.no }}</td>
   </tr>
 </table>
-
-<ul>
-  <li *ngFor="let Emp of employs">
-    {{ name: string }} {{ email: string }} {{ no: string }}
-  </li>
-</ul>
