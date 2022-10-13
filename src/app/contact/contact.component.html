@@ -7,8 +7,12 @@
     <th scope="col">no</th>
   </tr>
   <tr *ngFor="let Emp of employs">
-    <td>{{ Emp.name }}</td>
-    <td>{{ Emp.email }}</td>
+    <td [ngStyle]="{ color: 'blue' }">{{ Emp.name }}</td>
+    <td [ngStyle]="{ color: 'blue' }">{{ Emp.email }}</td>
     <td>{{ Emp.no }}</td>
   </tr>
 </table>
+
+<div *ngIf="employs.length == 0">
+  <p>No email.</p>
+</div>
