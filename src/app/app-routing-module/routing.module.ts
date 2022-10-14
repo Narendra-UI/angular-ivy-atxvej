@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent },
   { path: 'settings', component: SettingsComponent },
   { path: 'profile/add', component: ProfileAddComponent },
-  { path: 'profile/edit', component: EditComponent },
+  { path: 'profile/edit/:id', component: EditComponent },
   { path: 'profile/view', component: ViewComponent },
 ];
 @NgModule({

@@ -16,15 +16,15 @@
         <th>Actions</th>
       </tr>
       <tr *ngFor="let obj of data; let i = index">
-        <td>{{ i }}</td>
+        <td>{{ obj.id }}</td>
         <td>{{ obj.name }}</td>
         <td>{{ obj.contact }}</td>
         <td>{{ obj.aadhaar }}</td>
         <td>{{ obj.email }}</td>
         <td>
-          <span><a [routerLink]="'/profile/edit'">E</a></span>
+          <span><a [routerLink]="['/profile/edit', obj.id]">E</a></span>
           <span>D</span>
-          <span><a [routerLink]="'/profile/view'">V</a></span>
+          <span><a [routerLink]="['/profile/view', obj.id]">V</a></span>
         </td>
       </tr>
     </table>

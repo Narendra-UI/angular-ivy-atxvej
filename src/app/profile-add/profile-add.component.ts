@@ -25,6 +25,7 @@ export class ProfileAddComponent implements OnInit {
 
   ngOnInit() {
     this.profileForm = this.formBuilder.group({
+      id: new FormControl(''),
       name: new FormControl('', Validators.required),
       contact: new FormControl('', Validators.required),
       aadhaar: new FormControl('', Validators.required),
@@ -33,6 +34,12 @@ export class ProfileAddComponent implements OnInit {
     });
   }
   profileFormSubmit() {
+    console.log(this.profileForm.value);
+    //server side retuen back response
+    this.serviceRef.count = this.serviceRef.count + 1;
+    this.profileForm.patchValue({
+      id: this.serviceRef.count,
+    });
     console.log(this.profileForm.value);
     this.serviceRef.result.push(this.profileForm.value);
     this.routeRef.navigate(['/profile']);
