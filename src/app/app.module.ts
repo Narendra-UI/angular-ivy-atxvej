@@ -18,7 +18,13 @@ import { AppRoutingModule } from './app-routing-module/routing.module';
 import { SaleemService } from './saleem.service';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, AppRoutingModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    RouterModule,
+  ],
 
   declarations: [
     AppComponent,

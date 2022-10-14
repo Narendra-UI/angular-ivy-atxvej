@@ -35,7 +35,7 @@ export class ProfileAddComponent implements OnInit {
   }
   profileFormSubmit() {
     console.log(this.profileForm.value);
-    //server side retuen back response
+    //server side return back response
     this.serviceRef.count = this.serviceRef.count + 1;
     this.profileForm.patchValue({
       id: this.serviceRef.count,

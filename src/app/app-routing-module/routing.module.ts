@@ -18,7 +18,7 @@ const routes: Routes = [
   { path: 'settings', component: SettingsComponent },
   { path: 'profile/add', component: ProfileAddComponent },
   { path: 'profile/edit/:id', component: EditComponent },
-  { path: 'profile/view', component: ViewComponent },
+  { path: 'profile/view/:id', component: ViewComponent },
 ];
 @NgModule({
   imports: [CommonModule, RouterModule.forRoot(routes)],

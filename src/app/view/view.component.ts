@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import {
+  Router,
+  ActivatedRoute,
+  ActivatedRouteSnapshot,
+} from '@angular/router';
 
 @Component({
   selector: 'app-view',
@@ -6,7 +11,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./view.component.css'],
 })
 export class ViewComponent implements OnInit {
-  constructor() {}
+  constructor(private route: ActivatedRoute) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.route.params.subscribe((params) => {
+      console.log(params);
+      console.log(params['id']);
+    });
+  }
 }
