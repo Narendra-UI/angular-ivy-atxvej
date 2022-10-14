@@ -12,17 +12,13 @@ import { MainComponent } from './main/main.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SettingsComponent } from './settings/settings.component';
 import { ProfileAddComponent } from './profile-add/profile-add.component';
+import { ViewComponent } from './view/view.component';
+import { EditComponent } from './edit/edit.component';
 import { AppRoutingModule } from './app-routing-module/routing.module';
 import { SaleemService } from './saleem.service';
 
-
 @NgModule({
-  imports: [
-    BrowserModule,
-    FormsModule,
-    AppRoutingModule,
-    ReactiveFormsModule,
-  ],
+  imports: [BrowserModule, FormsModule, AppRoutingModule, ReactiveFormsModule],
 
   declarations: [
     AppComponent,
@@ -33,6 +29,8 @@ import { SaleemService } from './saleem.service';
     AboutComponent,
     SettingsComponent,
     ProfileAddComponent,
+    ViewComponent,
+    EditComponent,
   ],
 
   bootstrap: [AppComponent],

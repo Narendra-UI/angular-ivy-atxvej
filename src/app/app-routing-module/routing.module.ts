@@ -7,6 +7,8 @@ import { MainComponent } from '../main/main.component';
 import { ProfileComponent } from '../profile/profile.component';
 import { SettingsComponent } from '../settings/settings.component';
 import { ProfileAddComponent } from '../profile-add/profile-add.component';
+import { EditComponent } from '../edit/edit.component';
+import { ViewComponent } from '../view/view.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -15,6 +17,8 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent },
   { path: 'settings', component: SettingsComponent },
   { path: 'profile/add', component: ProfileAddComponent },
+  { path: 'profile/edit', component: EditComponent },
+  { path: 'profile/view', component: ViewComponent },
 ];
 @NgModule({
   imports: [CommonModule, RouterModule.forRoot(routes)],

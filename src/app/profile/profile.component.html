@@ -15,7 +15,7 @@
         <th>E-Mail</th>
         <th>Actions</th>
       </tr>
-      <tr *ngFor="let obj of data; let i = index; (i+1);">
+      <tr *ngFor="let obj of data; let i = index">
         <td>{{ i }}</td>
         <td>{{ obj.name }}</td>
         <td>{{ obj.contact }}</td>
