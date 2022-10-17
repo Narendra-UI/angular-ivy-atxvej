@@ -10,7 +10,6 @@ export class SaleemService {
       id: 1,
       name: 'sallem',
       contact: '9876543210',
-      aadhaar: '876543219879',
       email: 'asdfg@gmail.com',
       gender: 'male',
     },
