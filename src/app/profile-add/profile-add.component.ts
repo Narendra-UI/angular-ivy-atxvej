@@ -30,6 +30,7 @@ export class ProfileAddComponent implements OnInit {
       contact: new FormControl('', Validators.required),
       aadhaar: new FormControl('', Validators.required),
       email: new FormControl('', Validators.required),
+      profile: new FormControl('', Validators.required),
       gender: new FormControl('', Validators.required),
     });
   }
