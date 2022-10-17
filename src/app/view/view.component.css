@@ -1,9 +1,13 @@
-.head {
-  text-align: center;
-  background-color: rgb(248, 183, 183);
-  top: 0;
+.b-5 {
+  margin-top: 20px;
+  margin-left: 20px;
 }
+
 .d-1 {
-  margin-top: 100px;
-  margin-left: 300px;
+  margin-top: 50px;
+  margin-left: 100px;
+}
+.pc-10 {
+  margin-top: 30px;
+  margin-left: 200px;
 }
