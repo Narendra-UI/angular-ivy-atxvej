@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
@@ -17,6 +18,9 @@ import { EditComponent } from './edit/edit.component';
 import { AppRoutingModule } from './app-routing-module/routing.module';
 import { SaleemService } from './saleem.service';
 
+//import { ModuleOfNg } from '@angular/core';
+//import { ModuleOfNgb } from '@ng-bootstrap/ng-bootstrap';
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -24,6 +28,7 @@ import { SaleemService } from './saleem.service';
     AppRoutingModule,
     ReactiveFormsModule,
     RouterModule,
+    BrowserAnimationsModule,
   ],
 
   declarations: [
