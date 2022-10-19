@@ -21,7 +21,9 @@
         <td>{{ obj.email }}</td>
         <td>
           <span><a [routerLink]="['/profile/edit', obj.id]">E</a></span>
+          &nbsp;
           <span><a [routerLink]="['/profile/view', obj.id]">V</a></span>
+          &nbsp;
           <span
             ><button
               type="button"
