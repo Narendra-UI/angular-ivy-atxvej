@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Route, Router } from '@angular/router';
 import {
   FormGroup,
   FormBuilder,
@@ -7,6 +7,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { SaleemService } from '../saleem.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-edit',
@@ -17,24 +18,24 @@ export class EditComponent implements OnInit {
   editForm: FormGroup;
   editFormvalid: boolean = true;
   emp: any = {};
-  route: any;
+  id: any;
 
   constructor(
     private formBuilder: FormBuilder,
     private serviceRef: SaleemService,
-    private routeRef: Router
+    private routeRef: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit() {
     ///id extract
     // service inject
     //result.find
-
     //this.editForm = this.emp.name
-
-    this.route.params.subscribe((params) => {
+    this.routeRef.params.subscribe((params) => {
       console.log(params);
       console.log(params['id']);
+      this.id = params['id'];
       this.serviceRef.result.map((element) => {
         if (element.id == params['id']) {
           this.editForm = this.formBuilder.group({
@@ -47,9 +48,17 @@ export class EditComponent implements OnInit {
       });
     });
   }
-  // profileFormSubmit() {
-  //   console.log(this.editForm.value);
-  //   this.serviceRef.result.push(this.editForm.value);
-  //   this.routeRef.navigate(['/profile']);
-  // }
+  editFormSubmit() {
+    this.serviceRef.result = this.serviceRef.result.map((data) => {
+      if (data.id == this.id) {
+        data.id = this.id;
+        data.name = this.editForm.get('name').value;
+        data.contact = this.editForm.get('contact').value;
+        data.email = this.editForm.get('email').value;
+        data.gender = this.editForm.get('gender').value;
+      }
+      return data;
+    });
+    this.router.navigate(['/profile']);
+  }
 }

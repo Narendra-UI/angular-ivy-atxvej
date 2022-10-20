@@ -10,7 +10,7 @@
             <div class="f-data">
               <div class="row">
                 <div class="col-md-12">
-                  <form [formGroup]="editForm">
+                  <form [formGroup]="editForm" (ngSubmit)="editFormSubmit()">
                     <div class="col-md-9">
                       <label for="name">Name :</label>
                       <input type="text" formControlName="name" />
@@ -52,7 +52,7 @@
                         class="btn btn-success"
                         style="margin-left:10px;"
                       >
-                        <a [routerLink]="'/profile'">Update</a>
+                        Submit
                       </button>
                     </div>
                   </form>
