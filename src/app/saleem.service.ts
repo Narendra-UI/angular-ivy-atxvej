@@ -15,5 +15,25 @@ export class SaleemService {
     },
   ];
 
+  ref: any;
+  add(a, b) {
+    return a + b;
+  }
+  sub(x, y) {
+    return x - y;
+  }
+
+  match(){
+  const ref=["xyzxzrt"];
+  var a = this.ref.split("");
+  for(var i=0; i<a.length; i++){
+    for(var s=i+1; s<a.length-1; s++){
+      if(a[i]==s[a]){
+        count=count+1;
+      }
+    }
+  }
+}
+
   constructor() {}
 }
