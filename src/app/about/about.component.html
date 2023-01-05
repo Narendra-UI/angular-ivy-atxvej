@@ -1,1 +1,53 @@
 <h4 class="head">About Data</h4>
+
+<form [formGroup]="myForm">
+  <div>
+    <label>
+      Name:
+      <input formControlName="name" placeholder="Your name" />
+    </label>
+  </div>
+  <div>
+    <label>
+      Age:
+      <input formControlName="age" placeholder="Your age" />
+    </label>
+  </div>
+  <div>
+    <label>
+      Gender:
+      <input formControlName="gender" placeholder="Your gender" />
+    </label>
+  </div>
+  <button (click)="onSubmit(myForm)">Submit</button>
+  <div class="spinner-border text-primary" role="status" *ngIf="showLoader">
+    <span class="sr-only">Loading...</span>
+  </div>
+  <button (click)="myUpdateFunction(myForm)">Update</button>
+</form>
+
+<div>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>Action</th>
+    </tr>
+    <tr *ngFor="let user of usersData">
+      <td>{{ user.name }}</td>
+      <td>{{ user.age }}</td>
+      <td>{{ user.gender }}</td>
+      <td><button (click)="delete(user._id)">Delete</button></td>
+      <td><button (click)="getbyid(user._id)">Update</button></td>
+      <td>
+        <button (click)="getbyidview(user._id)">View</button>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<!-- <div><b>User Data :-</b></div>
+{{ userData.name }}
+{{ userData.age }}
+{{ userData.gender }} -->

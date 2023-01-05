@@ -22,6 +22,7 @@ export class ViewComponent implements OnInit {
     this.route.params.subscribe((params) => {
       console.log(params);
       console.log(params['id']);
+
       this.emp = this.serviceRef.result.find(
         (element) => element.id == params['id']
       );

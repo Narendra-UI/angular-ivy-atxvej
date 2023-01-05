@@ -17,6 +17,9 @@ import { ViewComponent } from './view/view.component';
 import { EditComponent } from './edit/edit.component';
 import { AppRoutingModule } from './app-routing-module/routing.module';
 import { SaleemService } from './saleem.service';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { HttpClientModule } from '@angular/common/http'; // add this line
 
 //import { ModuleOfNg } from '@angular/core';
 //import { ModuleOfNgb } from '@ng-bootstrap/ng-bootstrap';
@@ -29,6 +32,9 @@ import { SaleemService } from './saleem.service';
     ReactiveFormsModule,
     RouterModule,
     BrowserAnimationsModule,
+    MatProgressSpinnerModule,
+    MatProgressBarModule,
+    HttpClientModule,
   ],
 
   declarations: [
